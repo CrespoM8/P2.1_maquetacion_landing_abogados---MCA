@@ -303,3 +303,117 @@ section {
     align-items: center;
   }
 }
+/* -------------------------------------- */
+/* 2. About Section */
+/* -------------------------------------- */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 128px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 485px;
+}
+
+.about-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+/* Estilo para el texto en <em> dentro de la descripción */
+.about-description em {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 608px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 31px;
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .section-title-bar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* -------------------------------------- */
+/* 3. Banner Trilingüe */
+/* -------------------------------------- */
+.banner-section {
+  position: relative;
+  padding: 120px 0;
+  /* Ruta de imagen corregida */
+  background-image: url('assets/img/banner-trilingual-background.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 44, 80, 0.7);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.banner-description {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 36px;
+  }
+  .banner-description {
+    font-size: 18px;
+  }
+}
